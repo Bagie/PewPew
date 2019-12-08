@@ -17,6 +17,8 @@ public class Player : MonoBehaviour
     [SerializeField] int playerHealth = 3;
     bool isShiftRuning = false;
     bool immortal = false;
+    [SerializeField] Color immortalityColor;
+    [SerializeField] Color originalColor;
 
     //Acces cache
     [SerializeField] TextMeshProUGUI healthText;
@@ -26,6 +28,7 @@ public class Player : MonoBehaviour
     CapsuleCollider2D myCapsuleColider2D;
     BoxCollider2D myFeetBoxCol2D;
     float gravityScaleAtStart;
+    SpriteRenderer spriteRenderer;
 
     //Info
     [SerializeField] int jumpAmmount = 0;
@@ -48,7 +51,7 @@ public class Player : MonoBehaviour
 
     private void ComponentGetter()
     {
-        
+        spriteRenderer = GetComponent<SpriteRenderer>();
         myRigidbody2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         myCapsuleColider2D = GetComponent<CapsuleCollider2D>();
@@ -61,6 +64,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         if (!isAlive) { return; }
+       
         Die();
         SuperSpeed();
         Run();
@@ -69,9 +73,20 @@ public class Player : MonoBehaviour
         RunAnimaton();
         ClimbLadder();
         JumpOnEnemy();
-        
+        testColor();
+
 
     }
+
+  void testColor()
+    {
+        if (immortal) { 
+       // Color lerpedColorTest = Color.Lerp(originalColor, immortalityColor, Mathf.PingPong(Time.time, 10f));
+            Color lerpedColorTest = Color.Lerp(originalColor, immortalityColor, Mathf.PingPong(Time.time*7,1f));
+            spriteRenderer.color = lerpedColorTest;
+        }
+    }
+   
 
     private void JumpOnEnemy()
     {
@@ -122,18 +137,30 @@ public class Player : MonoBehaviour
     IEnumerator immortality ()
     {
         immortal = true;
-        yield return new WaitForSeconds(1f);
+        ImortalColorChange();
+        yield return new WaitForSeconds(2f);
              
         playerHealth -= 1;
         Debug.Log(playerHealth);
         healthText.text = playerHealth.ToString();
-        immortal = false;
+        spriteRenderer.color = originalColor;
+       immortal = false;
+      
+
     }
 
+    private void ImortalColorChange()
+    {
+        Color lerpedColor = Color.Lerp(originalColor, immortalityColor, Mathf.PingPong(Time.time, 1f));
+        spriteRenderer.color = lerpedColor;
+      
+    }
+
+ 
     IEnumerator ResetLevel(float waitTimeToReset)
     {
         yield return new WaitForSeconds(3f);
-            Debug.Log("gavos");
+            
         
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.buildIndex);

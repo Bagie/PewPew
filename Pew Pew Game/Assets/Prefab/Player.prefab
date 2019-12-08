@@ -158,6 +158,8 @@ MonoBehaviour:
   jumpSpeed: 20
   climbSpeed: 5
   playerHealth: 3
+  immortalityColor: {r: 1, g: 0, b: 0, a: 1}
+  originalColor: {r: 1, g: 1, b: 1, a: 1}
   healthText: {fileID: 0}
   jumpText: {fileID: 0}
   jumpAmmount: 0
