@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
     //Config
     [SerializeField] float runSpeed = 1f;
     [SerializeField] float shiftRunSpeed = 2f;
-    [SerializeField] float jumpSpeed = 5f;
+    [SerializeField] float jumpSpeed = 0.75f;
     [SerializeField] float climbSpeed = 5f;
     [SerializeField] int playerHealth = 3;
     bool isShiftRuning = false;
@@ -33,6 +33,7 @@ public class Player : MonoBehaviour
 
     //vars
     bool isTouchingGround;
+    bool isTouchingLadder;
     bool isAlive = true;
 
 
@@ -40,7 +41,7 @@ public class Player : MonoBehaviour
     void Start()
     {
 
-        Debug.Log(runSpeed);
+        
         ComponentGetter();
         gravityScaleAtStart = myRigidbody2D.gravityScale;
     }
@@ -144,7 +145,7 @@ public class Player : MonoBehaviour
 
     private void ClimbLadder()
     {
-        bool isTouchingLadder = myCapsuleColider2D.IsTouchingLayers(LayerMask.GetMask("Climbing"));
+        isTouchingLadder = myCapsuleColider2D.IsTouchingLayers(LayerMask.GetMask("Climbing"));
 
         if (!myCapsuleColider2D.IsTouchingLayers(LayerMask.GetMask("Climbing")))
         {
@@ -186,6 +187,7 @@ public class Player : MonoBehaviour
     private void Jump()
     {
         isTouchingGround = myFeetBoxCol2D.IsTouchingLayers(LayerMask.GetMask("Ground"));
+        isTouchingLadder = myCapsuleColider2D.IsTouchingLayers(LayerMask.GetMask("Climbing"));
 
         if (CrossPlatformInputManager.GetButtonDown("Jump") && isTouchingGround)
         {
@@ -194,7 +196,8 @@ public class Player : MonoBehaviour
             jumpCount();
         }
 
-
+      
+        
     }
 
     private void jumpCount()

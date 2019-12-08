@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2916319282144400518}
   - component: {fileID: 2916319282144400516}
   - component: {fileID: 777921220632889175}
-  - component: {fileID: 848446935925852637}
+  - component: {fileID: 1392651562}
   m_Layer: 12
   m_Name: EnemyFallowing
   m_TagString: Enemy
@@ -188,7 +188,7 @@ EdgeCollider2D:
   - {x: -0.41372585, y: 0.23910403}
   - {x: 0.41814423, y: 0.24079537}
   - {x: 0.5, y: 0}
---- !u!114 &848446935925852637
+--- !u!114 &1392651562
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
