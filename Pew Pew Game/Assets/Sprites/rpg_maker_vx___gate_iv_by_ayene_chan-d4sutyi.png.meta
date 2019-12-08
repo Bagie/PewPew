@@ -1,55 +1,43 @@
 fileFormatVersion: 2
-guid: c0f80a6a87e3fe147b023b80c1498a2e
+guid: 23537fee3b839d8488ca88600b54e6da
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6414447125379547148
-    second: SPA_Background brown tint_0
+      213: 6112076076810827033
+    second: rpg_maker_vx___gate_iv_by_ayene_chan-d4sutyi_0
   - first:
-      213: -2276109588449258574
-    second: SPA_Background brown tint_1
+      213: 5927020572323229239
+    second: rpg_maker_vx___gate_iv_by_ayene_chan-d4sutyi_1
   - first:
-      213: 7622431064557552515
-    second: SPA_Background brown tint_2
+      213: -3867959119948496484
+    second: rpg_maker_vx___gate_iv_by_ayene_chan-d4sutyi_2
   - first:
-      213: 289114549585270027
-    second: SPA_Background brown tint_3
+      213: 6797124105772434826
+    second: rpg_maker_vx___gate_iv_by_ayene_chan-d4sutyi_3
   - first:
-      213: -5862157076625757123
-    second: SPA_Background brown tint_4
+      213: 8654606278792126209
+    second: rpg_maker_vx___gate_iv_by_ayene_chan-d4sutyi_4
   - first:
-      213: 7565696428887314959
-    second: SPA_Background brown tint_5
+      213: -8528896789888787840
+    second: rpg_maker_vx___gate_iv_by_ayene_chan-d4sutyi_5
   - first:
-      213: 3104076937310148729
-    second: SPA_Background brown tint_6
+      213: -1594116535787281980
+    second: rpg_maker_vx___gate_iv_by_ayene_chan-d4sutyi_6
   - first:
-      213: 4777146490511550170
-    second: SPA_Background brown tint_7
+      213: -7097855990101132757
+    second: rpg_maker_vx___gate_iv_by_ayene_chan-d4sutyi_7
   - first:
-      213: 4021284656184010451
-    second: SPA_Background brown tint_8
+      213: -2617016920125476841
+    second: rpg_maker_vx___gate_iv_by_ayene_chan-d4sutyi_8
   - first:
-      213: -5428507737112726026
-    second: SPA_Background brown tint_9
+      213: -9057996569442406562
+    second: rpg_maker_vx___gate_iv_by_ayene_chan-d4sutyi_9
   - first:
-      213: 8721707918184771119
-    second: SPA_Background brown tint_10
+      213: 5332190008963192878
+    second: rpg_maker_vx___gate_iv_by_ayene_chan-d4sutyi_10
   - first:
-      213: 374688490947754656
-    second: SPA_Background brown tint_11
-  - first:
-      213: -1693060807349068911
-    second: SPA_Background brown tint_12
-  - first:
-      213: -568864715573125675
-    second: SPA_Background brown tint_13
-  - first:
-      213: 124453552786969483
-    second: SPA_Background brown tint_14
-  - first:
-      213: -3357515910591759238
-    second: SPA_Background brown tint_15
+      213: 471439060712553867
+    second: rpg_maker_vx___gate_iv_by_ayene_chan-d4sutyi_11
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -93,7 +81,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 30
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -132,13 +120,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SPA_Background brown tint_0
+      name: rpg_maker_vx___gate_iv_by_ayene_chan-d4sutyi_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 116
-        width: 32
-        height: 32
+        x: 7
+        y: 150
+        width: 60
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -146,20 +134,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a161af299c6403a40ba5d19d4decdb92
-      internalID: -6414447125379547148
+      spriteID: f34bc548e2d321b4f91eb83e9c083d04
+      internalID: 6112076076810827033
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPA_Background brown tint_1
+      name: rpg_maker_vx___gate_iv_by_ayene_chan-d4sutyi_1
       rect:
         serializedVersion: 2
-        x: 38
-        y: 116
-        width: 32
-        height: 32
+        x: 158
+        y: 150
+        width: 60
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,20 +155,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 907b13a26227842479561d5d01c2194f
-      internalID: -2276109588449258574
+      spriteID: cdf263d69d755894b8da238fe12eda3e
+      internalID: 5927020572323229239
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPA_Background brown tint_2
+      name: rpg_maker_vx___gate_iv_by_ayene_chan-d4sutyi_2
       rect:
         serializedVersion: 2
-        x: 76
-        y: 116
-        width: 32
-        height: 32
+        x: 82
+        y: 150
+        width: 60
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -188,20 +176,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 10e404dfba51e25489e504e953a82e37
-      internalID: 7622431064557552515
+      spriteID: b74aa72a95b609e4393c4ac6a2692b8a
+      internalID: -3867959119948496484
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPA_Background brown tint_3
+      name: rpg_maker_vx___gate_iv_by_ayene_chan-d4sutyi_3
       rect:
         serializedVersion: 2
-        x: 114
-        y: 116
-        width: 32
-        height: 32
+        x: 6
+        y: 100
+        width: 60
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -209,20 +197,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 543e7bb55d7dc384aaa53b884dcfbf4b
-      internalID: 289114549585270027
+      spriteID: 7cda9c60c694308468279252a9db4be6
+      internalID: 6797124105772434826
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPA_Background brown tint_4
+      name: rpg_maker_vx___gate_iv_by_ayene_chan-d4sutyi_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 78
-        width: 32
-        height: 32
+        x: 80
+        y: 100
+        width: 60
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -230,20 +218,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6849df7bbe0f14143bd80619e0575192
-      internalID: -5862157076625757123
+      spriteID: f388de092f209b341a9ab03b44d2df3b
+      internalID: 8654606278792126209
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPA_Background brown tint_5
+      name: rpg_maker_vx___gate_iv_by_ayene_chan-d4sutyi_5
       rect:
         serializedVersion: 2
-        x: 38
-        y: 78
-        width: 32
-        height: 32
+        x: 155
+        y: 100
+        width: 60
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -251,20 +239,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eed9db2a7dd1abe42ae8d601d0ec7de2
-      internalID: 7565696428887314959
+      spriteID: ed8c7958dedb15d4c97a49e4b4d299ea
+      internalID: -8528896789888787840
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPA_Background brown tint_6
+      name: rpg_maker_vx___gate_iv_by_ayene_chan-d4sutyi_6
       rect:
         serializedVersion: 2
-        x: 76
-        y: 78
-        width: 32
-        height: 32
+        x: 6
+        y: 50
+        width: 60
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -272,20 +260,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d287a52ace16cbb47941651ca0f108a3
-      internalID: 3104076937310148729
+      spriteID: ea3c30152c51aa84da0cd367ac39b1c7
+      internalID: -1594116535787281980
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPA_Background brown tint_7
+      name: rpg_maker_vx___gate_iv_by_ayene_chan-d4sutyi_7
       rect:
         serializedVersion: 2
-        x: 114
-        y: 78
-        width: 32
-        height: 32
+        x: 83
+        y: 50
+        width: 60
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -293,20 +281,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d67906f3175fb2418d642b4ba3dda50
-      internalID: 4777146490511550170
+      spriteID: 33563f3324a3f414d8dfd88b72ef85e8
+      internalID: -7097855990101132757
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPA_Background brown tint_8
+      name: rpg_maker_vx___gate_iv_by_ayene_chan-d4sutyi_8
       rect:
         serializedVersion: 2
-        x: 0
-        y: 40
-        width: 32
-        height: 32
+        x: 157
+        y: 50
+        width: 60
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -314,20 +302,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6bca65d2d459a0047b9702f469b19e85
-      internalID: 4021284656184010451
+      spriteID: b5343a1b6457ef143bb070f7623f514c
+      internalID: -2617016920125476841
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPA_Background brown tint_9
+      name: rpg_maker_vx___gate_iv_by_ayene_chan-d4sutyi_9
       rect:
         serializedVersion: 2
-        x: 38
-        y: 40
-        width: 32
-        height: 32
+        x: 4
+        y: 0
+        width: 60
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -335,20 +323,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 300ae1eec27c1d34fb3b4167d10dbab8
-      internalID: -5428507737112726026
+      spriteID: 46a99331f1c04c2498f096aa1fdc3691
+      internalID: -9057996569442406562
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPA_Background brown tint_10
+      name: rpg_maker_vx___gate_iv_by_ayene_chan-d4sutyi_10
       rect:
         serializedVersion: 2
-        x: 76
-        y: 40
-        width: 32
-        height: 32
+        x: 79
+        y: 0
+        width: 60
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -356,20 +344,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f2d5769158c3a7e4799a92e1c1d5160f
-      internalID: 8721707918184771119
+      spriteID: 8916091a5c956b74ab05d8167ce46e4a
+      internalID: 5332190008963192878
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPA_Background brown tint_11
+      name: rpg_maker_vx___gate_iv_by_ayene_chan-d4sutyi_11
       rect:
         serializedVersion: 2
-        x: 114
-        y: 40
-        width: 32
-        height: 32
+        x: 157
+        y: 0
+        width: 60
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -377,92 +365,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b367858ee025a094a9dcecaea21100be
-      internalID: 374688490947754656
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SPA_Background brown tint_12
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 2
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3b111e8c4cd27374aa342c6c361c477d
-      internalID: -1693060807349068911
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SPA_Background brown tint_13
-      rect:
-        serializedVersion: 2
-        x: 38
-        y: 2
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 59c7c3449ebe5744f89713d5611fc67d
-      internalID: -568864715573125675
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SPA_Background brown tint_14
-      rect:
-        serializedVersion: 2
-        x: 76
-        y: 2
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7c123c57e1bb0e047b908847b98ea1b7
-      internalID: 124453552786969483
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SPA_Background brown tint_15
-      rect:
-        serializedVersion: 2
-        x: 114
-        y: 2
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7e3b45bced89de74c8875072f132ce2c
-      internalID: -3357515910591759238
+      spriteID: 58d1b0a69f71f754ebc5f59827d8b909
+      internalID: 471439060712553867
       vertices: []
       indices: 
       edges: []
@@ -470,7 +374,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: e71388c954317e748ac07dc32f9e39ec
+    spriteID: 3790f0ceefd88e941b2d0cf20d177ef3
     internalID: 0
     vertices: []
     indices: 

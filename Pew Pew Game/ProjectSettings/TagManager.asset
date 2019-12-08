@@ -19,8 +19,8 @@ TagManager:
   - Background
   - Player
   - Enemy
-  - 
-  - 
+  - Hazards
+  - Beautify
   - 
   - 
   - 
@@ -45,14 +45,20 @@ TagManager:
   - name: Background
     uniqueID: 4047987785
     locked: 0
+  - name: Beautify
+    uniqueID: 2210198101
+    locked: 0
   - name: Climbing
     uniqueID: 1085684917
+    locked: 0
+  - name: Player
+    uniqueID: 36159721
     locked: 0
   - name: Enemy
     uniqueID: 788517485
     locked: 0
-  - name: Player
-    uniqueID: 36159721
+  - name: Hazards
+    uniqueID: 498071663
     locked: 0
   - name: Foreground
     uniqueID: 3832390297
