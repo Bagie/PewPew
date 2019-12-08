@@ -14,8 +14,8 @@ public class EnemyMoveFallows : MonoBehaviour
     Transform target;
     CapsuleCollider2D capsuleColidder;
     float distToGround;
-    //public float speed = .1f;
-    //Vector2 forwardAxis;
+  [SerializeField] float randomJumpMin = 300f;
+    [SerializeField] float randomJumpMax = 1500f;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +24,7 @@ public class EnemyMoveFallows : MonoBehaviour
         rigidbody2D = GetComponent<Rigidbody2D>();
         boxCollider2D = GetComponent<BoxCollider2D>();
         target = GameObject.FindWithTag("Player").GetComponent<Transform>();
-        StartCoroutine(EnemyJumps(2f));
+        StartCoroutine(EnemyJumps());
     }
 
     // Update is called once per frame
@@ -37,12 +37,18 @@ public class EnemyMoveFallows : MonoBehaviour
             Fallow();
         }
         Apsisukti();
-
+        ApsaugaNuoPeraukstai();
     
     }
 
-
-
+    private void ApsaugaNuoPeraukstai()
+    {
+        Debug.Log(rigidbody2D.velocity.y);
+     if(   rigidbody2D.velocity.y > 25f)
+        {
+            rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, 0);
+        }
+    }
 
     private void Apsisukti()
     {transform.localScale = new Vector2((Mathf.Sign(rigidbody2D.velocity.x)), 1f); }
@@ -74,11 +80,13 @@ public class EnemyMoveFallows : MonoBehaviour
 
 
     }
-    IEnumerator EnemyJumps(float jumpTime)
+    IEnumerator EnemyJumps()
     {
         while (true)
         {
-            yield return new WaitForSeconds(jumpTime);
+            
+
+            yield return new WaitForSeconds(UnityEngine.Random.Range(1f, 3f));
             /*if (target.position.x == transform.position.x)
             {
                  rigidbody2D.velocity = new Vector2(0f, 20f);
@@ -87,13 +95,15 @@ public class EnemyMoveFallows : MonoBehaviour
             if (target.position.x > transform.position.x + 1f && isEnemyTouchingGround)
             {
               //  rigidbody2D.velocity = new Vector2(2, 20f);
-                rigidbody2D.AddForce(Vector2.up * 1000f);
+                rigidbody2D.AddForce(Vector2.up * UnityEngine.Random.Range(randomJumpMin, randomJumpMax));
+                rigidbody2D.AddForce(transform.forward * UnityEngine.Random.Range(100f, 500f));
             }
 
             else if (target.position.x < transform.position.x - 1f && isEnemyTouchingGround)
             {
                 ///rigidbody2D.velocity = new Vector2(-2, 20f);
-                rigidbody2D.AddForce(Vector2.up * 1000f);
+                rigidbody2D.AddForce(Vector2.up * UnityEngine.Random.Range(randomJumpMin, randomJumpMax));
+                rigidbody2D.AddForce(transform.forward * UnityEngine.Random.Range(100f,500f));
             }
         
         }
@@ -101,5 +111,14 @@ public class EnemyMoveFallows : MonoBehaviour
 
     }
 
- 
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.name == "Foreground" && isEnemyTouchingGround)
+        {
+            Debug.Log("Enemy paliete");
+            rigidbody2D.AddForce(Vector2.up * 700f);
+            rigidbody2D.AddForce(transform.forward * 100f);
+        }
+        
+    }
 }
