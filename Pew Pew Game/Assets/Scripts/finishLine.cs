@@ -7,14 +7,49 @@ public class finishLine : MonoBehaviour
 {
     BoxCollider2D finishLineColider ;
     // Update is called once per frame
-    void Update()
+    float playerSize = 1;
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         finishLineColider = GetComponent<BoxCollider2D>();
         if (finishLineColider.IsTouchingLayers(LayerMask.GetMask("Player")))
-            {
-            Scene scene = SceneManager.GetActiveScene();
-            SceneManager.LoadScene(scene.buildIndex+1);
+        {
+            Transform playerBody = collision.GetComponent<Transform>();
+            Player player = collision.gameObject.GetComponent(typeof(Player)) as Player;
+            player.isFinished(true);
+            player.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+
+            StartCoroutine(DeacreaseSize(playerBody));
+            StartCoroutine(LoadNextLevel());
+            
+
+
 
         }
+    }
+
+    IEnumerator DeacreaseSize(Transform playerBody)
+    {
+        Vector3 currentPossitionForDeath = playerBody.position;
+
+        while (playerSize > 0f)
+        {
+            playerBody.position = currentPossitionForDeath;
+            playerSize -= 0.01f;
+            playerBody.localScale = new Vector3(Mathf.Clamp(playerSize,0,1), Mathf.Clamp(playerSize, 0, 1), 1f);
+            yield return new WaitForFixedUpdate();
+
+        }
+     
+    }
+
+    IEnumerator LoadNextLevel()
+    {
+
+     
+        yield return new WaitForSeconds(1f); 
+        Scene scene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(scene.buildIndex + 1);
     }
 }

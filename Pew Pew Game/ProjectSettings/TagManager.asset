@@ -21,7 +21,7 @@ TagManager:
   - Enemy
   - Hazards
   - Beautify
-  - 
+  - Interactables
   - 
   - 
   - 
@@ -47,6 +47,9 @@ TagManager:
     locked: 0
   - name: Beautify
     uniqueID: 2210198101
+    locked: 0
+  - name: Interactables
+    uniqueID: 1030916197
     locked: 0
   - name: Climbing
     uniqueID: 1085684917

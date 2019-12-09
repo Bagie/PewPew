@@ -38,13 +38,14 @@ public class Player : MonoBehaviour
     bool isTouchingGround;
     bool isTouchingLadder;
     bool isAlive = true;
+    bool isFinishedLevel = false;
 
 
     // Start is called before the first frame update
     void Start()
     {
 
-        
+
         ComponentGetter();
         gravityScaleAtStart = myRigidbody2D.gravityScale;
     }
@@ -58,13 +59,16 @@ public class Player : MonoBehaviour
         myFeetBoxCol2D = GetComponent<BoxCollider2D>();
     }
 
-
+    public void isFinished(bool finishPlayer)
+    {
+         isFinishedLevel = finishPlayer;
+    }
 
     // Update is called once per frame
     void Update()
     {
         if (!isAlive) { return; }
-       
+        if (isFinishedLevel) { return; }
         Die();
         SuperSpeed();
         Run();
@@ -141,7 +145,7 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(2f);
              
         playerHealth -= 1;
-        Debug.Log(playerHealth);
+       // Debug.Log(playerHealth);
         healthText.text = playerHealth.ToString();
         spriteRenderer.color = originalColor;
        immortal = false;

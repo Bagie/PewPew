@@ -31,7 +31,7 @@ public class EnemyMoveFallows : MonoBehaviour
     void Update()
     {
         isEnemyTouchingGround = capsuleColidder.IsTouchingLayers(LayerMask.GetMask("Ground"));
-        Debug.Log(isEnemyTouchingGround);
+        //Debug.Log(isEnemyTouchingGround);
         if (isEnemyTouchingGround)
         {
             Fallow();
@@ -43,7 +43,7 @@ public class EnemyMoveFallows : MonoBehaviour
 
     private void ApsaugaNuoPeraukstai()
     {
-        Debug.Log(rigidbody2D.velocity.y);
+       // Debug.Log(rigidbody2D.velocity.y);
      if(   rigidbody2D.velocity.y > 25f)
         {
             rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, 0);
