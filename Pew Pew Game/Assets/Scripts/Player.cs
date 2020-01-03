@@ -14,24 +14,20 @@ public class Player : MonoBehaviour
     [SerializeField] float shiftRunSpeed = 2f;
     [SerializeField] float jumpSpeed = 0.75f;
     [SerializeField] float climbSpeed = 5f;
-    [SerializeField] int playerHealth = 3;
     bool isShiftRuning = false;
-    bool immortal = false;
+   public bool immortal = false;
     [SerializeField] Color immortalityColor;
     [SerializeField] Color originalColor;
 
     //Acces cache
-    [SerializeField] TextMeshProUGUI healthText;
-    [SerializeField] TextMeshProUGUI jumpText;
     Rigidbody2D myRigidbody2D;
     Animator animator;
     CapsuleCollider2D myCapsuleColider2D;
     BoxCollider2D myFeetBoxCol2D;
     float gravityScaleAtStart;
     SpriteRenderer spriteRenderer;
+    GameSession gameSession;
 
-    //Info
-    [SerializeField] int jumpAmmount = 0;
 
 
     //vars
@@ -41,13 +37,14 @@ public class Player : MonoBehaviour
     bool isFinishedLevel = false;
 
 
+
     // Start is called before the first frame update
     void Start()
     {
-
-
         ComponentGetter();
         gravityScaleAtStart = myRigidbody2D.gravityScale;
+        gameSession.ResetInfo();  // reets health and jumps each level
+        gameSession.DisplayScoreboard();
     }
 
     private void ComponentGetter()
@@ -57,6 +54,8 @@ public class Player : MonoBehaviour
         animator = GetComponent<Animator>();
         myCapsuleColider2D = GetComponent<CapsuleCollider2D>();
         myFeetBoxCol2D = GetComponent<BoxCollider2D>();
+        gameSession = FindObjectOfType<GameSession>();
+        gameSession.GetInfo();  // resets info in game manager each level
     }
 
     public void isFinished(bool finishPlayer)
@@ -67,6 +66,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+      
         if (!isAlive) { return; }
         if (isFinishedLevel) { return; }
         Die();
@@ -120,7 +120,7 @@ public class Player : MonoBehaviour
            
 
 
-            if (playerHealth == 0)
+            if (gameSession.playerHealth == 0)
                 {
                 GetComponent<Rigidbody2D>().velocity = new Vector2(10, 220);
                 animator.SetTrigger("Death");
@@ -129,7 +129,7 @@ public class Player : MonoBehaviour
                 Destroy(myCapsuleColider2D);
                 Destroy(myFeetBoxCol2D);
                 isAlive = false;
-                StartCoroutine(ResetLevel(2));
+                gameSession.ResetLevel();
             }
             else if (!immortal)
                 StartCoroutine(immortality());
@@ -142,12 +142,12 @@ public class Player : MonoBehaviour
     {
         immortal = true;
         ImortalColorChange();
+        gameSession.lowerHealth();
         yield return new WaitForSeconds(2f);
-             
-        playerHealth -= 1;
+
+        
        // Debug.Log(playerHealth);
-        healthText.text = playerHealth.ToString();
-        spriteRenderer.color = originalColor;
+       spriteRenderer.color = originalColor;
        immortal = false;
       
 
@@ -159,19 +159,6 @@ public class Player : MonoBehaviour
         spriteRenderer.color = lerpedColor;
       
     }
-
- 
-    IEnumerator ResetLevel(float waitTimeToReset)
-    {
-        yield return new WaitForSeconds(3f);
-            
-        
-        Scene scene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(scene.buildIndex);
-
-    }
-    
-
 
 
     private void ClimbLadder()
@@ -224,19 +211,11 @@ public class Player : MonoBehaviour
         {
             Vector2 jumpVelocity = new Vector2(0f, jumpSpeed);
             myRigidbody2D.velocity += jumpVelocity;
-            jumpCount();
+            gameSession.increaseJumps();
         }
-
-      
-        
     }
 
-    private void jumpCount()
-    {
-        jumpAmmount += 1;
-        jumpText.text = jumpAmmount.ToString();
-        Debug.Log(jumpAmmount);
-    }
+  
 
 
     private void RunAnimaton()
